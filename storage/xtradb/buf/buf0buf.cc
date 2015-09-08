@@ -2907,7 +2907,7 @@ loop:
 			}
 
 			/* Do not try again for encrypted pages */
-			if (!corrupted) {
+	 		if (!corrupted) {
 				ib_mutex_t* pmutex = buf_page_get_mutex(bpage);
 				mutex_enter(&buf_pool->LRU_list_mutex);
 				mutex_enter(pmutex);
